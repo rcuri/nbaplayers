@@ -62,13 +62,6 @@ class Config(object):
     override environment variables depending on current environment.
     """
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    CACHE = {
-        'CACHE_TYPE': 'redis',
-        'CACHE_REDIS_HOST': os.environ.get('CACHE_REDIS_HOST') or 'localhost',
-        'CACHE_REDIS_PORT': os.environ.get('CACHE_REDIS_PORT') or '6379',
-        'CACHE_REDIS_URL': os.environ.get('CACHE_REDIS_URL') or \
-        'redis://localhost:6379'
-    }
     CELERY = {
         'MAIN_MODULE_NAME': 'nbaplayers',
         'ENABLE_UTC': True,
